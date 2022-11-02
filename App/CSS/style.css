@@ -1,0 +1,83 @@
+/* CSS RESET */
+html{
+    box-sizing:border-box;
+    font-size:62.5%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing:inherit;
+}
+
+/* RESET END */
+body{
+    min-height:100vh;
+
+    background:linear-gradient(
+        45deg,
+        #D2D4D5,
+        #808080
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-inline:1em;
+}
+
+.container{
+    width:90vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:0.5em;
+}
+
+.panel{
+    height:80vh;
+    position: relative;
+    border-radius:5px;
+    overflow:hidden;
+    flex:0.5;
+    transition:all 0.5s ease-in;
+    cursor: pointer;
+}
+.panel.active{
+    flex:5;
+}
+
+.panel-image{
+    position: absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    filter:brightness(0.7);
+
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+}
+
+.panel-text{
+    position: absolute;
+    bottom:1em;
+    left:1em;
+
+    color:#fff;
+    opacity:0;
+    transition:all 0.5s linear;
+    
+}
+.panel.active .panel-text{
+    opacity:1;
+}
+
+@media screen and (max-width:600px) {
+    .container{
+        width:100vw;
+    }
+}
