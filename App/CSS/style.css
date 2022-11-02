@@ -17,8 +17,8 @@ body{
 
     background:linear-gradient(
         45deg,
-        #D2D4D5,
-        #808080
+        #292a2b,
+        #272626
     );
 
     display:flex;
@@ -29,9 +29,11 @@ body{
 
 .container{
     width:90vw;
+   
     display:flex;
     justify-content:center;
     align-items:center;
+   
     gap:0.5em;
 }
 
@@ -69,7 +71,7 @@ body{
 
     color:#fff;
     opacity:0;
-    transition:all 0.5s linear;
+    transition:all 0.5s linear 0.5s;
     
 }
 .panel.active .panel-text{
@@ -79,5 +81,6 @@ body{
 @media screen and (max-width:600px) {
     .container{
         width:100vw;
+        font-size:1rem;
     }
 }
